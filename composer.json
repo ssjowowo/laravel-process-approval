@@ -1,5 +1,5 @@
 {
-    "name": "ringlesoft/laravel-process-approval",
+    "name": "ssjowowo/laravel-process-approval",
     "description": "A package to handle process approval flow in a laravel application.",
     "type": "laravel-package",
     "homepage": "https://ringlesoft.com/packages/laravel-process-approval",
