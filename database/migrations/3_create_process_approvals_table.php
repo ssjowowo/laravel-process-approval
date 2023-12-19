@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('approval_action', 12)->default('Approved');
             $table->text('approver_name')->nullable();
             $table->text('comment')->nullable();
-            $table->foreignId('user_id')->references('id')->on('users')->cascadeOnDelete();
+            $table->foreignUuid('user_id');
             $table->timestamps();
         });
     }
