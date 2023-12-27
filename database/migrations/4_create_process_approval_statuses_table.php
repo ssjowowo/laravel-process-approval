@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('process_approval_statuses', static function (Blueprint $table) {
             $table->id();
-            $table->morphs('approvable');
+            $table->uuidMorphs('approvable');
             $table->json('steps')->nullable();
             $table->string('status', 10)->default(\RingleSoft\LaravelProcessApproval\Enums\ApprovalStatusEnum::CREATED->value);
             $table->foreignUuid('creator_id')->nullable();
