@@ -16,7 +16,7 @@ return new class extends Migration
             $table->morphs('approvable');
             $table->json('steps')->nullable();
             $table->string('status', 10)->default(\RingleSoft\LaravelProcessApproval\Enums\ApprovalStatusEnum::CREATED->value);
-            $table->foreignId('creator_id')->nullable();
+            $table->foreignUuid('creator_id')->nullable();
             $table->timestamps();
         });
     }
